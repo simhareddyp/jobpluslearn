@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+<title>jQuery mtz.monthpicker Demos</title>
+
+
+</head>
+
+<body>
+
+
+
+<input type="text" id="demo-3" > <input type="button" value="..." id="demo-3-button"><small> ( click the button )</small>
+<script src="jquery.min.js"></script>
+<link rel="stylesheet" href="jquery-ui.css">
+<script src="jquery-ui.min.js"></script>
+<script src="jpl.monthpicker.js"></script>
+<script>
+
+
+
+
+
+
+$('#demo-3').monthpicker().bind('monthpicker-change-year', function (e, year) {
+    $('#demo-3').monthpicker('disableMonths', []); // (re)enables all
+    if (year === '2015') {
+        $('#demo-3').monthpicker('disableMonths', [1, 2, 3, 4]);
+    }
+    if (year === '2014') {
+        $('#demo-3').monthpicker('disableMonths', [9, 10, 11, 12]);
+    }
+});
+
+$('#demo-3-button').bind('click', function () {
+    $('#demo-3').monthpicker('show');
+});
+</script>
+
+</body>
+</html>

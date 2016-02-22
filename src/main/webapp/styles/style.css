@@ -1,0 +1,63 @@
+center h2
+{
+	padding-top: 50px;
+	font-family: sans-serif;
+}
+
+.login_controll {
+    max-width: 480px;
+    width:100%;
+    margin: 0 auto;
+    background-color: #ECECEC;
+    min-height: 280px;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+.button_wrapper
+{
+	margin-top: 100px;
+}
+a.user_login_btn {
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: #717171;
+    color: #fff;
+    line-height: 40px;
+    margin-right: 20px;
+}
+a.client_login_btn {
+    width: 120px;
+    height: 40px;
+    display: inline-block;
+    font-family: sans-serif;
+    text-decoration: none;
+    background-color: #3BA3D2;
+    color: #fff;
+    line-height: 40px;
+  
+}
+
+@media screen and (max-width: 480px) {
+.login_controll {
+
+    display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_login_ctrl
+{
+	max-width: 480px;
+    width:100%;
+    margin: 0 auto;
+    background-color: #ECECEC;
+    min-height: 280px;
+    -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+    box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+}
+

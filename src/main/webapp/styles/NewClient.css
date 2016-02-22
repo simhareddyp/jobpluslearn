@@ -1,0 +1,121 @@
+/*page background*/
+html {
+	height: 100%;
+	/*Image only BG fallback*/
+	background: url("../images/gs.png") left top;
+	
+}
+
+/*heading*/
+h1 {
+	font-size: 25px;
+	font-weight:bold;
+	text-transform: uppercase;
+	color: #2C3E50;
+	margin-bottom: 10px;
+    
+}
+
+/*form styles*/
+#msform {
+	background: #f3f4e8;
+	width: 955px;
+	margin: 50px auto;
+	text-align: left;
+	border-radius: 2px;
+    
+	/*position: relative;*/
+}
+fieldset  {
+	background: white;
+	border: 0 none;
+	border-radius: 3px;
+	-webkit-box-shadow: -1px -1px 5px 5px rgba(255,255,255,1);
+-moz-box-shadow: -1px -1px 5px 5px rgba(255,255,255,1);
+box-shadow: -1px -1px 5px 5px rgba(255,255,255,1);
+	padding: 20px 30px;
+	
+	box-sizing: border-box;
+      margin: 0 auto;
+	
+	/*stacking fieldsets above each other*/
+	position: relative;
+}
+/*Telephone line*/
+.small-box
+{
+ width: 92px !important;
+}
+/*inputs*/
+input[type="text"], input[type="password"], textarea {
+	padding: 15px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin-bottom: 10px;
+	width: 350px;
+	height:3px ;
+	/*box-sizing: border-box;*/
+	font-family: montserrat;
+	color: #2C3E50;
+	font-size: 17px;
+	    
+}
+.wraperclass:first-child {
+    margin-bottom: 10px;
+}
+/*buttons*/
+ input[type="button"],input[type="submit"] {
+	width: 160px;
+	background: #27AE60;
+	font-weight: bold;
+	color: white;
+	border: 0 none;
+	border-radius: 1px;
+	cursor: pointer;
+	padding: 10px 5px;
+	margin: 10px 5px;
+}
+ input[type="button"]:hover,  input[type="button"]:focus,input[type="submit"]:hover,  input[type="submit"]:focus {
+	box-shadow: 0 0 0 2px white, 0 0 0 3px #27AE60;
+}
+
+
+.fs-subtitle {
+	font-weight: normal;
+	font-size: 13px;
+	color: #666;
+	margin-bottom: 20px;
+}
+/*div in one line*/
+.wrapper 
+{
+float:left;
+width: 20%;
+padding-left: 10%;
+margin-top: 10px;
+}
+
+.my_select {
+	padding: 1px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 382px;
+    height: 39px;
+    /* box-sizing: border-box; */
+    font-family: montserrat;
+    color: #2C3E50;
+    font-size: 17px;
+	}
+	
+.my_button
+{
+	display: inline-block;
+	padding-left: 32.5%;
+	margin-top: 10px;
+}
+.test
+{
+	padding-left: 30%;
+}
+	
