@@ -57,6 +57,7 @@ public class JobPostingController {
 		pnew.setClientemailid(clientsession.trim());
 		pnew.setClientId(clisession);
 		mv.addObject("industryDetailsList", refDataBo.getIndustryDetailsList());
+		mv.addObject("levelList",refDataBo.getLevelsList());
 		List<String> templates = refDataJDBCTemplate.listTemplates1(clisession);
 		List<String> emails = refDataJDBCTemplate.listEmails((clientsession.split("@"))[1]);
 		mv.addObject("emaillist", emails);
@@ -78,29 +79,30 @@ public class JobPostingController {
 
 			return "jobPosting";
 		} else {
-			clientSession1 = request.getSession();
-			clisession = (Integer) request.getSession().getAttribute("clientid");
-			jobpostingDm.setClientId(clisession);
-			String newjob = request.getParameter("jobname");
-			String selectedtemplate = request.getParameter("template");
-			if (jobpostingDm.getJobid() == null && newjob != null && !newjob.equalsIgnoreCase("")) {
-				jobpostingDm.setTemplate(newjob);
-				jobPostingDao.insertJobposting(jobpostingDm);
-			} else if (jobpostingDm.getJobid() == null && newjob != null) {
-				if (selectedtemplate.contains("-1"))
-					jobpostingDm.setTemplate(null);
-				jobPostingDao.insertJobposting(jobpostingDm);
-			}else if(jobpostingDm.getJobid() != null &&  (newjob == null || newjob.equalsIgnoreCase("")))
-			{
-				jobPostingDao.updateJobposting(jobpostingDm);
-				//System.out.println("hefhewfhewiohwiohiohiohwifhw"+jobpostingDm.getJobid());
-			}else if(jobpostingDm.getJobid() != null &&  !(newjob == null || newjob.equalsIgnoreCase("")))
-			{
-				jobpostingDm.setTemplate(newjob);
-				jobPostingDao.insertJobposting(jobpostingDm);
-			}
+			
+				clientSession1 = request.getSession();
+				clisession = (Integer) request.getSession().getAttribute("clientid");
+				jobpostingDm.setClientId(clisession);
+				String newjob = request.getParameter("jobname");
+				String selectedtemplate = request.getParameter("template");
+				if (jobpostingDm.getJobid() == null && newjob != null && !newjob.equalsIgnoreCase("")) {
+					jobpostingDm.setTemplate(newjob);
+					jobPostingDao.insertJobposting(jobpostingDm);
+				} else if (jobpostingDm.getJobid() == null && newjob != null) {
+					if (selectedtemplate.contains("-1"))
+						jobpostingDm.setTemplate(null);
+					jobPostingDao.insertJobposting(jobpostingDm);
+				}else if(jobpostingDm.getJobid() != null &&  (newjob == null || newjob.equalsIgnoreCase("")))
+				{
+					jobPostingDao.updateJobposting(jobpostingDm);
+					//System.out.println("hefhewfhewiohwiohiohiohwifhw"+jobpostingDm.getJobid());
+				}else if(jobpostingDm.getJobid() != null &&  !(newjob == null || newjob.equalsIgnoreCase("")))
+				{
+					jobpostingDm.setTemplate(newjob);
+					jobPostingDao.insertJobposting(jobpostingDm);
+				}
+			
 			return "clientLoginSuccess";
-
 		}
 	}
 
@@ -130,6 +132,14 @@ public class JobPostingController {
 		return "naraTest";
 
 	}
+	
+	@RequestMapping(value = "/jobPostingPreview")
+	public ModelAndView jobPostingPreview(@ModelAttribute("postForm") JobPostingDm jobpostingDm, final HttpServletRequest request,
+			BindingResult result, ModelMap model) {
+		ModelAndView mv = new ModelAndView("jobPostPreview", "postForm", jobpostingDm);
+			mv.setViewName("jobPostPreview");
+		return mv;
 
+	}
 
 	}

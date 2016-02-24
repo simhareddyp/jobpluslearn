@@ -242,10 +242,10 @@
 
 			</div>
 	</form:form>
-	<form:form method="GET" commandName="clilogoutAction"
+	<%-- <form:form method="GET" commandName="clilogoutAction"
 		action="clientloginpage">
 		<input type="submit" value="Logout" style="height: 40px; width: 150px" />
 
-	</form:form>
+	</form:form> --%>
 </body>
 </html>

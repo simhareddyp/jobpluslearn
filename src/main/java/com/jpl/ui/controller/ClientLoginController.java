@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.jpl.dao.ClientDao;
+//import com.jpl.dao.ClientDao;
 import com.jpl.dao.ClientLoginDao;
 import com.jpl.ui.model.ClientLoginDm;
 
@@ -21,8 +21,8 @@ import com.jpl.ui.model.ClientLoginDm;
 @RequestMapping(value = "/client")
 public class ClientLoginController {
 
-	@Autowired
-	private ClientDao clientDao;
+	/*@Autowired
+	private ClientDao clientDao;*/
 
 	@Autowired
 	private ClientLoginDao clientLoginDao;

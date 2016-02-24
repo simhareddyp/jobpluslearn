@@ -68,7 +68,7 @@
 </script>
 <script>
 	$(document).ready(function() {
-		$('#myform').previewForm();
+		$('#target').previewForm();
 	});
 </script>
 <script>
@@ -117,9 +117,10 @@
 </script>
 <SCRIPT TYPE="text/javascript">
 	function popupform(myform) { //myform=document.getElementById("target")
+		alert('Hi');
 		if (!window.focus)
 			return true;
-		window.open('', 'Priview', 'height=200,width=400,scrollbars=yes');
+		window.open('jobPostingPreview', 'Priview', 'height=200,width=400,scrollbars=yes');
 		myform.target = windowname;
 		return true;
 	}
@@ -134,7 +135,19 @@
 			$("#txtPassportNumber").hide()
 		}
 	}
+	
+	 
 </script>
+<script>
+function displayOutput(){
+	 $("#listemails").show();
+	var emailId = $("#userInput").val();
+	alert(emailId);
+	$("#newEmails").val(emailId) ;
+	$("#userInput").val("");
+} 
+      
+    </script>
 </head>
 <body onload='emailfunction()'>
 <input type="hidden" name="newjob" value=<%  %>/>
@@ -347,13 +360,113 @@
 				<div class="col-xs-1">
 					<form:select path="ctcmin" style="height: 32px">
 						<form:option label="Min Sal" value="-1" />
-						<form:option label="1" value="2" size="6px" />
+						<form:option label="0" value="0" />
+						<form:option label="1" value="1" />
+						<form:option label="2" value="2" />
+						<form:option label="3" value="3" />
+						<form:option label="4" value="4" />
+						<form:option label="5" value="5" />
+						<form:option label="6" value="6" />
+						<form:option label="7" value="7" />
+						<form:option label="8" value="8" />
+						<form:option label="9" value="9" />
+						<form:option label="10" value="10" />
+						<form:option label="11" value="11" />
+						<form:option label="12" value="12" />
+						<form:option label="13" value="13" />
+						<form:option label="14" value="14" />
+						<form:option label="15" value="15" />
+						<form:option label="16" value="16" />
+						<form:option label="17" value="17" />
+						<form:option label="18" value="18" />
+						<form:option label="19" value="19" />
+						<form:option label="20" value="20" />
+						<form:option label="21" value="21" />
+						<form:option label="22" value="22" />
+						<form:option label="23" value="23" />
+						<form:option label="24" value="24" />
+						<form:option label="25" value="25" />
+						<form:option label="26" value="26" />
+						<form:option label="27" value="27" />
+						<form:option label="28" value="28" />
+						<form:option label="29" value="29" />
+						<form:option label="30" value="30" />
+						<form:option label="31" value="31" />
+						<form:option label="32" value="32" />
+						<form:option label="33" value="33" />
+						<form:option label="34" value="34" />
+						<form:option label="35" value="35" />
+						<form:option label="36" value="36" />
+						<form:option label="37" value="37" />
+						<form:option label="38" value="38" />
+						<form:option label="39" value="39" />
+						<form:option label="40" value="40" />
+						<form:option label="41" value="41" />
+						<form:option label="42" value="42" />
+						<form:option label="43" value="43" />
+						<form:option label="44" value="44" />
+						<form:option label="45" value="45" />
+						<form:option label="46" value="46" />
+						<form:option label="47" value="47" />
+						<form:option label="48" value="48" />
+						<form:option label="49" value="49" />
+						<form:option label="50" value="50" />
 					</form:select>
 				</div>
 				<div class="col-xs-1">
 					<form:select path="ctcmax" style="height: 32px">
 						<form:option label="Max Sal" value="-1" />
-						<form:option label="1000" value="3" size="6px" />
+						<form:option label="0" value="0" />
+						<form:option label="1" value="1" />
+						<form:option label="2" value="2" />
+						<form:option label="3" value="3" />
+						<form:option label="4" value="4" />
+						<form:option label="5" value="5" />
+						<form:option label="6" value="6" />
+						<form:option label="7" value="7" />
+						<form:option label="8" value="8" />
+						<form:option label="9" value="9" />
+						<form:option label="10" value="10" />
+						<form:option label="11" value="11" />
+						<form:option label="12" value="12" />
+						<form:option label="13" value="13" />
+						<form:option label="14" value="14" />
+						<form:option label="15" value="15" />
+						<form:option label="16" value="16" />
+						<form:option label="17" value="17" />
+						<form:option label="18" value="18" />
+						<form:option label="19" value="19" />
+						<form:option label="20" value="20" />
+						<form:option label="21" value="21" />
+						<form:option label="22" value="22" />
+						<form:option label="23" value="23" />
+						<form:option label="24" value="24" />
+						<form:option label="25" value="25" />
+						<form:option label="26" value="26" />
+						<form:option label="27" value="27" />
+						<form:option label="28" value="28" />
+						<form:option label="29" value="29" />
+						<form:option label="30" value="30" />
+						<form:option label="31" value="31" />
+						<form:option label="32" value="32" />
+						<form:option label="33" value="33" />
+						<form:option label="34" value="34" />
+						<form:option label="35" value="35" />
+						<form:option label="36" value="36" />
+						<form:option label="37" value="37" />
+						<form:option label="38" value="38" />
+						<form:option label="39" value="39" />
+						<form:option label="40" value="40" />
+						<form:option label="41" value="41" />
+						<form:option label="42" value="42" />
+						<form:option label="43" value="43" />
+						<form:option label="44" value="44" />
+						<form:option label="45" value="45" />
+						<form:option label="46" value="46" />
+						<form:option label="47" value="47" />
+						<form:option label="48" value="48" />
+						<form:option label="49" value="49" />
+						<form:option label="50" value="50" />
 					</form:select>
 				</div>
 			</div>
@@ -416,16 +529,21 @@
 			<h3>Desired Candidate Profile</h3>
 			<div class="row" style="margin-bottom: 15px;">
 				<div class="col-xs-3">
-					<form:label path="levelId">Specify PG Qualification: <font
+					<form:label path="levelId">Specify Qualification: <font
 							color='red'>*</font>
 					</form:label>
 				</div>
 				<div class="col-xs-3">
-					<form:errors cssClass="err" htmlEscape="false" path="levelId" />
-					<form:input path="levelId" id="technologies" />
+					<form:errors cssClass="err" htmlEscape="false" path="levelId" element="div"/>
+					<form:input path="levelId" id="technologies" /> 
+					<%-- <form:select path="levelId" style="height: 32px">
+						<form:option label="-- Select qualification --" value="-1" />
+						<form:options items="${levelList}" itemLabel="levelCode"
+							itemValue="levelId" />
+					</form:select>  --%>
 				</div>
 			</div>
-			<div class="row" style="margin-bottom: 15px;">
+			<%-- <div class="row" style="margin-bottom: 15px;">
 				<div class="col-xs-3">
 					<form:label path="levelId">Specify Grduate Qualification: <font
 							color='red'>*</font>
@@ -435,7 +553,7 @@
 					<form:errors cssClass="err" htmlEscape="false" path="levelId" />
 					<form:input path="levelId" id="technologies" />
 				</div>
-			</div>
+			</div> --%>
 			<div class="row" style="margin-bottom: 15px;">
 				<div class="col-xs-3">
 					<form:label path="branchId">Branch <font color='red'>*</font> :</form:label>
@@ -569,12 +687,15 @@
 					<div class="col-xs-3">
 
 						<input type="text" id="userInput"
-							value=" Specify New Email Id Here " /> <input type="button"
+							placeholder=" Specify New Email Id Here " /> <input type="button"
 							value="Add" onclick="displayOutput()" />
-
+					
 					</div>
-
+					
 				</div>
+				<div id="listemails" style="display:none">
+						<div id="newEmails"></div>
+					</div>
 			</div>
 			<div id="walkinresponse" style="display: none">
 				<div id="walkin" class="row"">
@@ -683,12 +804,12 @@
 						<label><b>Photo : </b></label>
 					</div>
 					<div class="col-xs-3">
-						<input type="file" name="file" />
+						<input type="file" name="file" path="file"/>
 					</div>
-					<div class="col-xs-3">
+					 <%-- <div class="col-xs-3">
 						<input type="submit" value="upload photo(s)" /> <span><form:errors
 								path="file" cssClass="error" /></span>
-					</div>
+					</div>  --%>
 				</form:form>
 			</div>
 			<h3>Shedule Refresh</h3>
@@ -713,22 +834,36 @@
 			</div>
 			<div class="row" style="margin-bottom: 15px;">
 				<div class="col-xs-3">
-					<input type="submit" value="submit"
+					<input type="button" value="Preview" onclick="popupform(this);"
 						style="height: 40px; width: 150px" />
 				</div>
+				<div class="col-xs-3">
+					<input type="submit" value="Save" 
+						style="height: 40px; width: 150px" />
+				</div>
+				<div class="col-xs-3">
+					<input type="submit" value="SaveAndPost" 
+						style="height: 40px; width: 150px" />
+				</div>
+				<div class="col-xs-3">
+					<input type="submit" value="Post" 
+						style="height: 40px; width: 150px" />
+				</div>
+				</div>
+				<!-- Preview, Save, Save & Post, Post -->
 	</form:form>
 
 
 
 
-	<div class="col-xs-3" style="width: 150px;">
+	<%-- <div class="col-xs-3" style="width: 150px;">
 		<form:form method="GET" commandName="clilogoutAction"
 			action="clientloginpage">
 			<input type="submit" value="Logout"
 				style="height: 40px; width: 150px" />
 		</form:form>
 
-	</div>
-	</div>
+	</div> --%>
+	<!--  </div> -->
 </body>
 </html>
